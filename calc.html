@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator</title>
   <style>
     .calculator {
-      width: 250px;
+      width: 500px;
+      height: 100%
       background-color: #f1f1f1;
       padding: 10px;
       border-radius: 10px;
@@ -86,8 +89,8 @@
   </div>
 
   <script>
-    const resultElement = document.getElementById("result");
 
+    const resultElement = document.getElementById("result");
 
     function appendCharacter(character) {
       resultElement.value += character;
@@ -100,7 +103,6 @@
     function deleteLastCharacter() {
       resultElement.value = resultElement.value.slice(0, -1);
     }
-
 
     function calculateResult() {
       let result = resultElement.value;
