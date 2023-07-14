@@ -86,25 +86,22 @@
   </div>
 
   <script>
-    // Get HTML elements
     const resultElement = document.getElementById("result");
 
-    // Append a character to the result
+
     function appendCharacter(character) {
       resultElement.value += character;
     }
 
-    // Clear the result
     function clearResult() {
       resultElement.value = "";
     }
 
-    // Delete the last character from the result
     function deleteLastCharacter() {
       resultElement.value = resultElement.value.slice(0, -1);
     }
 
-    // Calculate the result
+
     function calculateResult() {
       let result = resultElement.value;
 
