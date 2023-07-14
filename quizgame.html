@@ -19,8 +19,10 @@
       text-align: center;
     }
 
-    #question {
-      margin-bottom: 40px;
+   #question {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: bold;
     }
 
     #choices {
@@ -32,19 +34,34 @@
       margin-bottom: 50px;
     }
 
-    #result {
-      text-align: center;
+     button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
     }
 
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: center;
+    }
     @media (max-width: 600px) {
       #choices li {
         display: block;
+        .container {
+        padding: 10px;
       }
     }
 </style>
 </head>
 <body>
-  <div class="container">
+ <div class="container">
     <h1>Quiz Game</h1>
     <div id="question"></div>
     <ul id="choices"></ul>
@@ -88,7 +105,7 @@
 
     let currentQuestion = 0;
     let score = 0;
-
+s
     function showQuestion() {
       const question = quizData[currentQuestion];
       questionElement.textContent = question.question;
@@ -137,9 +154,9 @@
       resultElement.innerHTML = `<h2>Your Score: ${score}/${quizData.length}</h2>`;
     }
 
+    // Event listener for submit button click
     submitButton.addEventListener("click", checkAnswer);
 
-    // Start the quiz
     showQuestion();
   </script>
 </body>
