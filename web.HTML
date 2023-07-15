@@ -103,6 +103,13 @@ footer {
 text-align: center;
 color: blue;
 }
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
 
     </style>
 </head>
@@ -132,9 +139,22 @@ color: blue;
             <a href="Contact us.html" target="_self">Contact us</a>
             </div>
 </nav>
-     <section id="home">
-    <div class="#Home">
-        <img src="https://excelglobalcollege.com/images/banner/slide1.jpg" alt="Screenshot" width= "100%;">
+     <div id="#Home">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img src="https://excelglobalcollege.com/images/banner/slide1.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="https://excelglobalcollege.com/images/banner/slide2.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="https://excelglobalcollege.com/images/banner/slide3.jpg" style="width:100%">
+            </div>
+            
+            </div>
         <h1 ALIGN="center">Testimonials</h1>
         <div style="display: flex;justify-content: space-evenly;" >
         <p ALIGN="left">
@@ -178,6 +198,22 @@ color: blue;
       </div>
     </div>
 </section>
+<script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          slides[slideIndex-1].style.display = "block"; 
+          setTimeout(showSlides, 2000);
+        }
+        </script>
     
     <footer>
         <p>©2021 Excel Global College.<br>
